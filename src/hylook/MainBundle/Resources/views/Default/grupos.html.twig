@@ -1,0 +1,56 @@
+{% extends 'hylookMainBundle:Default:layout.html.twig' %}
+{% block header %}{{ include('hylookMainBundle:Default:header.html.twig') }}{% endblock %}
+{% block slider %}{{ include('hylookMainBundle:Default:slider.html.twig') }}{% endblock %}
+{% block content %}
+
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+					<div class="row clearfix">
+
+						<div class="col-lg-5">
+							<div class="heading-block topmargin">
+								<h1>BIENVENIDO A LA PAGINA GRUPOS</h1>								
+							</div>
+							<p class="lead">Página de pruebas para los ejercicios del curso</p>
+						</div>
+
+						<div class="col-lg-7">
+
+							hhhhhhhhhhhhhhhhhh
+						</div>
+
+					</div>
+				</div>
+		
+				<script type="text/javascript">
+
+					jQuery(window).load(function(){
+
+						
+
+						$('#page-menu a').click(function(){
+							$('#page-menu li').removeClass('current');
+							$(this).parent('li').addClass('current');
+							var selector = $(this).attr('data-filter');
+							$container.isotope({ filter: selector });
+							return false;
+						});
+
+						$(window).resize(function() {
+							$container.isotope('layout');
+						});
+
+					});
+
+				</script>
+
+				<div class="clear"></div>
+
+				
+			</div>
+
+	
+{% endblock %}
+{% block footer %}{{ include('hylookMainBundle:Default:footer.html.twig') }}{% endblock %}

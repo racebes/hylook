@@ -1,3 +1,7 @@
+hylook_main:
+    resource: "@hylookMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

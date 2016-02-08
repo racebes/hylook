@@ -1,0 +1,28 @@
+hylook_main_homepage:
+    path:     /
+    defaults: { _controller: hylookMainBundle:Default:index }
+
+hylook_main_lector:
+    pattern: /lector/
+    defaults: { _controller: hylookMainBundle:Default:lector  }
+    
+hylook_main_grupos:
+    pattern: /grupos/
+    defaults: { _controller: hylookMainBundle:Default:grupos  }       
+
+hylook_main_addOneEmisor:
+    path: /emisor/addOne/{nombre}/{descripcion}
+    defaults: {_controller: hylookMainBundle:Default:addOne, nombre:desconocido, descripcion:sin datos }
+    
+hylook_main_allEmisor:
+    path: /emisor/all
+    defaults: {_controller: hylookMainBundle:Default:getAll }    
+   
+hylook_main_oneEmisor:
+    path: /emisor/ficha/{id}
+    defaults: {_controller: hylookMainBundle:Default:getById }       
+
+hylook_main_emisor:
+    pattern: /emisor/
+    defaults: { _controller: hylookMainBundle:Default:emisor  }
+     
