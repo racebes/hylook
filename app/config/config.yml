@@ -35,6 +35,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        contact_email: racebes@globales.es
+
 
 # Assetic Configuration
 assetic:
