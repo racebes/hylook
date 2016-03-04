@@ -25,4 +25,15 @@ hylook_main_oneEmisor:
 hylook_main_emisor:
     pattern: /emisor/
     defaults: { _controller: hylookMainBundle:Default:emisor  }
+  
+usuario_registro:
+    pattern: /registro
+    defaults: { _controller: hylookMainBundle:Default:registro }
+
+new_emisor:
+    pattern: /emisor/new
+    defaults: { _controller: hylookMainBundle:Default:newemisor }  
      
+new_lector:
+    pattern: /lector/new
+    defaults: { _controller: hylookMainBundle:Default:newlector }     

@@ -15,9 +15,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ path('hylook_main_homepage')}}"><div>Muro</div></a></li>
-        <li><a href="{{ path('hylook_main_emisor')}}"><div>{% trans %}Emisor{% endtrans %}</div></a></li>
-         <li><a href="{{ path('hylook_main_lector')}}"><div>Lector</div></a></li>
+        <li class="active"><a href="{{ path('hylook_main_homepage')}}"><div>Muro</div></a></li>        
+        <li class="dropdown">          
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans %}Emisor{% endtrans %}<span class="caret"></span></a>
+          <ul class="dropdown-menu"> 
+            <li><a href="{{ path('hylook_main_emisor')}}"><div>{% trans %}Emisor{% endtrans %}</div></a></li>           
+            <li><a class="boton" href="{{ path('new_emisor') }}">Nuevo Emisor</a></li>
+                   
+          </ul>
+        </li>
+        <li class="dropdown">          
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lector<span class="caret"></span></a>
+          <ul class="dropdown-menu"> 
+            <li><a href="{{ path('hylook_main_lector')}}"><div>Lector</div></a></li>           
+            <li><a class="boton" href="{{ path('new_lector') }}">Nuevo Lector</a></li>
+                   
+          </ul>
+        </li>        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Los grupos<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -34,7 +48,7 @@
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Salir</a></li>
+        <li><a class="boton" href="{{ path('usuario_registro') }}">Regístrate</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta <span class="caret"></span></a>
           <ul class="dropdown-menu">

@@ -2,7 +2,6 @@
 namespace hylook\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * 
@@ -33,7 +32,7 @@ class Emisor{
 	 */
 	protected $usuario;
 	
-		
+/*		
 	public function __construct($nombre, $descripcion, Usuarios $usuario){
 		
 		$this -> nombre = $nombre;
@@ -41,7 +40,7 @@ class Emisor{
 		$this -> usuario = $usuario;
 		
 	}
-	
+	*/
 	public function getId(){
 		return $this->id;
 	}

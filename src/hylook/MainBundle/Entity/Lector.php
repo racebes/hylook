@@ -32,6 +32,7 @@ class Lector{
 	 */
 	protected $usuario;
 	
+/*		
 	public function __construct($nombre, $descripcion, Usuarios $usuario){
 	
 		$this -> nombre = $nombre;
@@ -39,7 +40,7 @@ class Lector{
 		$this -> usuario = $usuario;
 	
 	}
-	
+	*/
 	public function getId(){
 	return $this->id;
 	

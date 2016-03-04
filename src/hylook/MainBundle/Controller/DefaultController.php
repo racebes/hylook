@@ -7,6 +7,11 @@ use hylook\MainBundle\Entity\Emisor;
 use Symfony\Component\HttpFoundation\Response;
 use hylook;
 use hylook\MainBundle\hylookMainBundle;
+use hylook\MainBundle\Form\UsuariosType;
+use hylook\MainBundle\Entity\Usuarios;
+use hylook\MainBundle\Form\EmisorType;
+use hylook\MainBundle\Entity\Lector;
+use hylook\MainBundle\Form\LectorType;
 
 class DefaultController extends Controller
 {
@@ -66,5 +71,80 @@ class DefaultController extends Controller
     	return new Response($res);
     	
     }
+    
+   /*
+    public function registroAction()
+    {
+    	$usuario = new UsuariosType();
+    	$formulario = $this->createFormBuilder($usuario)
+    	->add('nombre')
+        ->add('usernick')
+        ->add('passacceso')
+    	->getForm();
+    	return $this->render('hylookMainBundle:Default:registro.html.twig',	array('formulario' => $formulario->createView())
+    			);
+    }
+    */
+    
+    public function registroAction()
+    {
+    	$peticion = $this->getRequest();
+    	$usuario = new Usuarios();
+    	$formulario = $this->createForm(new UsuariosType(), $usuario);
+    	if ($peticion->getMethod() == 'POST') {
+			$formulario->bind($peticion);
+			if ($formulario->isValid()) {
+				$em = $this->getDoctrine()->getEntityManager();
+				$em->persist($usuario);
+				$em->flush();					
+				return $this->redirect($this->generateUrl('hylook_main_homepage'));
+			}
+		}
+    	return $this->render(
+    			'hylookMainBundle:Default:registro.html.twig',
+    			array('formulario' => $formulario->createView())    			
+    			);
+    }
+    
+    public function newemisorAction()
+    {
+    	$peticion = $this->getRequest();
+    	$emisor = new Emisor();
+    	$formulario = $this->createForm(new EmisorType(), $emisor);
+    	if ($peticion->getMethod() == 'POST') {
+    		$formulario->bind($peticion);
+    		if ($formulario->isValid()) {
+    			$em = $this->getDoctrine()->getEntityManager();
+    			$em->persist($emisor);
+    			$em->flush();
+    			return $this->redirect($this->generateUrl('hylook_main_homepage'));
+    		}
+    	}
+    	return $this->render(
+    			'hylookMainBundle:Default:newemisor.html.twig',
+    			array('formulario' => $formulario->createView())
+    			);
+    }
+    
+    public function newlectorAction()
+    {
+    	$peticion = $this->getRequest();
+    	$lector = new Lector();
+    	$formulario = $this->createForm(new LectorType(), $lector);
+    	if ($peticion->getMethod() == 'POST') {
+    		$formulario->bind($peticion);
+    		if ($formulario->isValid()) {
+    			$em = $this->getDoctrine()->getEntityManager();
+    			$em->persist($lector);
+    			$em->flush();
+    			return $this->redirect($this->generateUrl('hylook_main_homepage'));
+    		}
+    	}
+    	return $this->render(
+    			'hylookMainBundle:Default:newlector.html.twig',
+    			array('formulario' => $formulario->createView())
+    			);
+    }
+    
 }
 
