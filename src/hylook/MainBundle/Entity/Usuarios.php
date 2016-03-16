@@ -50,6 +50,7 @@ class Usuarios
      * @var string
      *
      * @ORM\Column(name="passacceso", type="string", length=50)
+     * @Assert\Length(min = 6)
      */
     private $passacceso;
 

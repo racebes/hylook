@@ -20,13 +20,15 @@
 
 						
 							{{ form_start(formulario, {'attr' : { 'id' : 'nuevo-usuario'}}) }}
-							
-								{{ form_errors(formulario) }}
+							  <div class="errors">
+									{{ form_errors(formulario) }}
+							</div>
+								
 								<fieldset>
-									<legend>Datos de usuario</legend>
-									{{ form_label(formulario.nombre, 'Nombre y apellidos: ') }}<span>{{ form_widget(formulario.nombre) }}</span> <br>
-									{{ form_label(formulario.nombre, 'E-mail: ') }}<span>{{ form_widget(formulario.email) }}</span> <br>
-									{{ form_label(formulario.usernick, 'Usuario o Nick: ') }} <span>{{ form_widget(formulario.usernick) }}</span> <br>
+									<legend>Datos de usuario</legend>									
+									{{ form_label(formulario.nombre, 'Nombre y apellidos: ') }}<span>{{ form_widget(formulario.nombre) }}</span> {{  form_errors(formulario.nombre) }} <br>
+									{{ form_label(formulario.nombre, 'E-mail: ') }}<span>{{ form_widget(formulario.email) }}</span> {{  form_errors(formulario.email) }} <br>
+									{{ form_label(formulario.usernick, 'Usuario o Nick: ') }} <span>{{ form_widget(formulario.usernick) }}</span> {{  form_errors(formulario.usernick) }} <br>
 									{{ form_row(formulario.passacceso) }}
 									
 								</fieldset>

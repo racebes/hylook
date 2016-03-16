@@ -17,6 +17,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+    	$log = $this->get('logger');
+    	$log->addInfo('Carga la portada ');
         return $this->render('hylookMainBundle:Default:index.html.twig');
     }
     
@@ -88,6 +90,8 @@ class DefaultController extends Controller
     
     public function registroAction()
     {
+    	$log = $this->get('logger');
+    	$log->addInfo('Registro de usuario ');
     	$peticion = $this->getRequest();
     	$usuario = new Usuarios();
     	$formulario = $this->createForm(new UsuariosType(), $usuario);
@@ -108,6 +112,8 @@ class DefaultController extends Controller
     
     public function newemisorAction()
     {
+    	$log = $this->get('logger');
+    	$log->addInfo('Nuevo Emisor ');
     	$peticion = $this->getRequest();
     	$emisor = new Emisor();
     	$formulario = $this->createForm(new EmisorType(), $emisor);
@@ -128,6 +134,8 @@ class DefaultController extends Controller
     
     public function newlectorAction()
     {
+    	$log = $this->get('logger');
+    	$log->addInfo('Nuevo Lector');
     	$peticion = $this->getRequest();
     	$lector = new Lector();
     	$formulario = $this->createForm(new LectorType(), $lector);
