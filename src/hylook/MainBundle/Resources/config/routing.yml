@@ -1,39 +1,58 @@
 hylook_main_homepage:
-    path:     /
-    defaults: { _controller: hylookMainBundle:Default:index }
-
+    path:     /{_locale}
+    defaults: { _controller: hylookMainBundle:Default:index, _locale: es_ES }
+    requirements:
+        _locale: en_US|es_ES    
 hylook_main_lector:
-    pattern: /lector/
-    defaults: { _controller: hylookMainBundle:Default:lector  }
+    pattern: /{_locale}/lector/
+    defaults: { _controller: hylookMainBundle:Default:lector, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES
     
 hylook_main_grupos:
-    pattern: /grupos/
-    defaults: { _controller: hylookMainBundle:Default:grupos  }       
+    pattern: /{_locale}/grupos/
+    defaults: { _controller: hylookMainBundle:Default:grupos, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES      
 
 hylook_main_addOneEmisor:
-    path: /emisor/addOne/{nombre}/{descripcion}
-    defaults: {_controller: hylookMainBundle:Default:addOne, nombre:desconocido, descripcion:sin datos }
+    path: /{_locale}/emisor/addOne/{nombre}/{descripcion}
+    defaults: {_controller: hylookMainBundle:Default:addOne, nombre:desconocido, descripcion:sin datos, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES
     
 hylook_main_allEmisor:
-    path: /emisor/all
-    defaults: {_controller: hylookMainBundle:Default:getAll }    
+    path: /{_locale}/emisor/all
+    defaults: {_controller: hylookMainBundle:Default:getAll, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES    
    
 hylook_main_oneEmisor:
-    path: /emisor/ficha/{id}
-    defaults: {_controller: hylookMainBundle:Default:getById }       
+    path: /{_locale}/emisor/ficha/{id}
+    defaults: {_controller: hylookMainBundle:Default:getById, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES     
 
 hylook_main_emisor:
-    pattern: /emisor/
-    defaults: { _controller: hylookMainBundle:Default:emisor  }
+    pattern: /{_locale}/emisor/
+    defaults: { _controller: hylookMainBundle:Default:emisor, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES
   
 usuario_registro:
-    pattern: /registro
-    defaults: { _controller: hylookMainBundle:Default:registro }
+    pattern: /{_locale}/registro
+    defaults: { _controller: hylookMainBundle:Default:registro, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES
 
 new_emisor:
-    pattern: /emisor/new
-    defaults: { _controller: hylookMainBundle:Default:newemisor }  
+    pattern: /{_locale}/emisor/new
+    defaults: { _controller: hylookMainBundle:Default:newemisor, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES 
      
 new_lector:
-    pattern: /lector/new
-    defaults: { _controller: hylookMainBundle:Default:newlector }     
+    pattern: /{_locale}/lector/new
+    defaults: { _controller: hylookMainBundle:Default:newlector, _locale: es_ES  }
+    requirements:
+        _locale: en_US|es_ES    

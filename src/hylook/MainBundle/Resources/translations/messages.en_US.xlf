@@ -1,0 +1,67 @@
+﻿<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="es" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Inicio</source>
+                <target>Home en_US</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>Muro</source>
+                <target>MuroE</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>Emisor</source>
+                <target>Transmitter</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Nuevo emisor</source>
+                <target>New transmitter</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Lector</source>
+                <target>Reader</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Nuevo lector</source>
+                <target>New Reader</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>Los grupos</source>
+                <target>The groups</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Grupos</source>
+                <target>Groups</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>Buscar</source>
+                <target>Search</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>Registrate</source>
+                <target>Sign up</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>Mi cuenta</source>
+                <target>My account</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>Mis datos</source>
+                <target>My profile</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>Mis mensajes</source>
+                <target>My messages</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>Avisos</source>
+                <target>Notifications</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>Cerrar sesión</source>
+                <target>Sign off</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

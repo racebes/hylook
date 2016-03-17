@@ -15,11 +15,33 @@ use hylook\MainBundle\Form\LectorType;
 
 class DefaultController extends Controller
 {
+	
     public function indexAction()
     {
     	$log = $this->get('logger');
     	$log->addInfo('Carga la portada ');
+    	
+    	
+    	
+    	$locale = $this->getRequest()->getLocale();
+    	$request = $this->getRequest();
+    	$languages = $request->getLanguages();
+    	//$language = $request->getPreferredCulture(array('es', 'en'));
+    	$PreferredLanguage = $request->getPreferredLanguage();
+       foreach ($languages as $clave=>$valor)
+   		{
+   		echo "El valor de $clave es: $valor <br>";
+   		}
+   		echo "PreferredLanguage: $PreferredLanguage <br>";
+        echo "el default locale es: $locale <br>";
+       // $this->getRequest()->setLocale($PreferredLanguage);
+       // $locale = $this->getRequest()->getLocale();
+     //  echo "el locale del Usuario es: $locale <br>";
+       
+        $translated = $this ->get('translator')->trans('Inicio');
+        echo "Inicio traducido es: $translated";
         return $this->render('hylookMainBundle:Default:index.html.twig');
+        
     }
     
     public function emisorAction()

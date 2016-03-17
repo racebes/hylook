@@ -14,10 +14,11 @@
 					</div><!-- #logo end -->
                     <div>
 			 {% set locale = app.request.locale %}
+			 {{ locale }}
 			 {% if locale == 'es_ES' %}
 			     <span>Español</span>
-			     <a href="{{ path('hylook_main_homepage', { '_locale': 'en_EN' }) }}">English</a>
-			 {% elseif locale == 'en_EN' %}
+			     <a href="{{ path('hylook_main_homepage', { '_locale': 'en_US' }) }}">English</a>
+			 {% elseif locale == 'en_US' %}
 			     <a href="{{ path('hylook_main_homepage', { '_locale': 'es_ES' }) }}">Español</a>
 			     <span>English</span>
 			 {% endif %}
